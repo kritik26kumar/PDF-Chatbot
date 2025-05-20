@@ -1,0 +1,22 @@
+\# Public Finance # TABLE 9.4 Effective Federal Tax Rates, 2005
+
+| Income Category  | Average Income Pretax | Average Income After-Tax | All Federal Individual Income Taxes | Social Insurance Taxes | Corporate Income Taxes | Excise Taxes |     |
+| ---------------- | --------------------- | ------------------------ | ----------------------------------- | ---------------------- | ---------------------- | ------------ | --- |
+| Lowest quintile  | 15,900                | 15,300                   | 4.3                                 | 6.5                    | 8.3                    | 0.4          | 2.1 |
+| Second quintile  | 37,400                | 33,700                   | 9.9                                 | 1.0                    | 9.2                    | 0.5          | 1.3 |
+| Middle quintile  | 58,500                | 50,200                   | 14.2                                | 3.0                    | 9.5                    | 0.7          | 1.0 |
+| Fourth quintile  | 85,200                | 70,300                   | 17.4                                | 6.0                    | 9.7                    | 1.0          | 0.8 |
+| Highest quintile | 231,300               | 172,200                  | 25.5                                | 14.1                   | 6.0                    | 4.9          | 0.5 |
+| All quintiles    | 84,800                | 67,400                   | 20.5                                | 9.0                    | 7.6                    | 3.1          | 0.8 |
+| Top 10%          | 339,100               | 246,300                  | 27.4                                | 16.0                   | 4.8                    | 6.1          | 0.4 |
+| Top 5%           | 520,200               | 369,800                  | 28.9                                | 17.6                   | 3.5                    | 7.4          | 0.3 |
+| Top 1%           | 1,558,500             | 1,071,500                | 31.2                                | 19.4                   | 1.7                    | 9.9          | 0.2 |
+
+Source: Congressional Budget Office. As we move from low- to high-income households, the ratio of consumption to income falls, because the affluent save a greater percentage of their income. Thus, either a RST or a VAT is regressive—the tax burden as a percentage of income falls as we move from low- to high-income households. By contrast, with the progressive income tax, the tax burden as a percentage of income rises as we move from low- to high-income households. Tables 9.4 and 9.5 present data and estimates based on tax incidence analysis from a Congressional Budget Office (CBO) study. The tables provide important information on the distribution of the federal tax burden and provide a background for appreciating how the distribution of the burden would change if the income tax were replaced with either a retail sales tax or a value-added tax. In both tables, U.S. households are ranked in order from lowest income to highest income. Each quintile contains 20% of the nation’s households. To allocate the tax burden to households, the CBO makes certain assumptions about the incidence of each tax by using the kind of analysis we presented in Chapter 7:
+
+* Individual income taxes are fully borne by the households that pay them. In terms of our analysis of tax incidence in Chapter 7, the CBO assumes that the supply of labor and the supply of saving are completely inelastic (i.e., both have vertical supply curves), so the suppliers (i.e., households) bear the whole burden. Thus, the burden is simply what each household pays—none is shifted to the demanders.
+* Payroll taxes are fully borne by workers. In terms of our analysis in Chapter 7, the CBO assumes that the supply of labor is completely inelastic.
+* Corporate income taxes are borne by the owners of capital. In terms of our analysis in Chapter 7, the CBO assumes the supply of saving is completely inelastic.
+* Excise taxes—taxes on commodities—are fully borne by consumers. In terms of Chapter 7, the CBO assumes supply is completely elastic (a horizontal supply curve).
+
+In Table 9.4 the left column gives the average pretax income in 2005 for households in each income class. For the bottom quintile, the average pretax income is $15,900; for Source: U.S. Congressional Budget Office, Historical Effective Federal Tax Rates: 1979–2005, December 2007.

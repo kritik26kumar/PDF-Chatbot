@@ -1,0 +1,9 @@
+\# Public Finance How do firms get the permits? We consider two alternatives. Under the first, the government sells permits to firms. Under the second, the government gives permits to firms. Under both plans, after obtaining permits from the government on January 1, firms can buy or sell permits—the permits are tradable (marketable) throughout the year; on the following December 31, firms must hold a number of permits equal to its emissions during that calendar year or else face punishment. # Government Sells Permits First, consider the plan in which the government sells or auctions permits to firms, illustrated in Figure 2.6; as shown, the government has decided to supply 50 permits. But how would the government set the price of a permit? Suppose the government announces a tentative price and asks firms to place orders for permits at this price. If the total quantity of permits “demanded” at this tentative price by the firms is greater than the quantity of permits the government is supplying (50), then the government would raise the tentative price and ask firms to place orders at the new price. Raising the price would decrease the demand for permits. Symmetrically, if the total quantity of permits demanded at this tentative price by the firms is less than the quantity of permits the government is supplying (50), then the government would lower the tentative price and ask firms to place orders at the new price. # FIGURE 2.6 The Permit Market
+
+|   | $200 |   |   |    |    |    |    |   |    |   |    |
+| - | ---- | - | - | -- | -- | -- | -- | - | -- | - | -- |
+|   | $60  |   |   |    |    |    |    |   |    |   |    |
+|   | $50  |   |   |    |    |    |    |   |    |   |    |
+|   | $40  |   |   |    |    |    |    |   |    |   |    |
+|   | $20  |   |   |    |    |    |    |   |    |   |    |
+|   | 10   |   |   | 30 | 35 | 40 | 45 |   | 50 |   | 75 |

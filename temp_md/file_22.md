@@ -1,0 +1,4 @@
+\# Chapter One # Introduction to Public Finance Royalty-Free/CORBIS The purpose of this introductory chapter is to give you the flavor of the material that will follow in the rest of this book. Its aim is to whet your appetite, not satisfy it. Don’t be concerned when questions are raised but answers aren’t given or when terms are used that are not fully explained. That’s the purpose of the rest of the book. Let’s begin our tour of public finance economics with a basic question: Why do we have a government? Why are there taxes and government spending? Why public finance? Most courses in economics correctly teach that the free market usually does a good job in producing goods and services. Economists therefore find it useful to begin by asking the following questions:
+
+* Why not leave everything to “the market”?
+* Why have any taxes and government spending?

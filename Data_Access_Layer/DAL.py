@@ -1,137 +1,77 @@
-import fitz  # PyMuPDF
-from PIL import Image
-import pytesseract.pytesseract as pt
-import streamlit as st
-import tempfile
-from unstructured.partition.pdf import partition_pdf
-from unstructured.partition.xlsx import partition_xlsx
-from unstructured.documents.elements import NarrativeText, Table, Image
+from typing import List, Tuple, Any
+from llama_parse import LlamaParse
+from llama_index.core import Document
 import os
+import tempfile
+import logging
+from pathlib import Path
 
-class data_loader:
-    """Class to load and extract data from user-uploaded files."""
-    def extract_text_from_pdf(self, pdf_files):
-        """Extract text, tables, and images from PDF files."""
-        extracted_content = []
-        if not pdf_files:
-            st.error("No PDF files provided.")
-            return extracted_content
+class DataLoader:
+    """
+    Class to load and extract structured Markdown content from PDF files using LlamaParse.
+    Output is saved as .md files and returned as a list of LlamaIndex Document objects.
+    """
+
+    def extract_text_from_pdf(self, pdf_files: List[Any], output_dir: str = ".") -> Tuple[List[Document], List[str]]:
+        """
+        Extract text from PDF files, save as Markdown, and return Document objects.
+
+        Args:
+            pdf_files: List of file-like objects with name and read() method.
+            output_dir: Directory to save Markdown files (default: current directory).
+
+        Returns:
+            Tuple of (list of Document objects, list of error messages).
+        """
+        logging.basicConfig(level=logging.INFO)
+        documents = []
+        errors = []
+        api_key = os.getenv("LLAMAPARSE_API_KEY")
+        if not api_key:
+            errors.append("LLAMAPARSE_API_KEY environment variable not set")
+            return documents, errors
+
+        parser = LlamaParse(api_key=api_key, result_type="markdown")
+        output_path = Path(output_dir)
+        output_path.mkdir(parents=True, exist_ok=True)
+
+        if not isinstance(pdf_files, list):
+            errors.append("pdf_files must be a list")
+            return documents, errors
 
         for pdf_file in pdf_files:
-            if not pdf_file.name.lower().endswith('.pdf'):
-                st.error(f"File {pdf_file.name} is not a valid PDF.")
-                continue
-
-            # Save file temporarily
-            with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
-                tmp_file.write(pdf_file.read())
-                tmp_file_path = tmp_file.name
-
             try:
-                # Use Unstructured.io for advanced extraction
-                elements = partition_pdf(tmp_file_path, strategy="hi_res", ocr_languages="eng")
-                for element in elements:
-                    if isinstance(element, NarrativeText):
-                        extracted_content.append({"type": "text", "content": element.text, "source": pdf_file.name})
-                    elif isinstance(element, Table):
-                        extracted_content.append({"type": "table", "content": element.text, "source": pdf_file.name})
-                    elif isinstance(element, Image):
-                        extracted_content.append({"type": "image", "content": element.text or "Image content", "source": pdf_file.name})
+                if not hasattr(pdf_file, 'name') or not pdf_file.name.lower().endswith(".pdf"):
+                    errors.append(f"Skipping invalid file: {getattr(pdf_file, 'name', 'unknown')}")
+                    continue
 
-                # Fallback to PyMuPDF for text if Unstructured.io fails
-                if not extracted_content:
-                    text = ""
-                    with fitz.open(stream=pdf_file.read(), filetype="pdf") as doc:
-                        for page_num, page in enumerate(doc, 1):
-                            try:
-                                extracted_text = page.get_text()
-                                if not extracted_text.strip():
-                                    pix = page.get_pixmap()
-                                    image = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
-                                    extracted_text = pt.image_to_string(image)
-                                text += extracted_text + "\n"
-                            except Exception as e:
-                                st.warning(f"Error processing page {page_num} in {pdf_file.name}: {str(e)}")
-                    if text.strip():
-                        extracted_content.append({"type": "text", "content": text, "source": pdf_file.name})
-            except fitz.FileDataError:
-                st.error(f"File {pdf_file.name} is corrupted or not a valid PDF.")
+                logging.info(f"Processing file: {pdf_file.name}")
+                with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as temp_pdf:
+                    temp_pdf.write(pdf_file.read())
+                    temp_pdf_path = temp_pdf.name
+
+                try:
+                    parsed_docs = parser.load_data(temp_pdf_path)
+                    if not parsed_docs:
+                        errors.append(f"No content extracted from {pdf_file.name}")
+                        continue
+
+                    md_file = output_path / f"{Path(pdf_file.name).stem}.md"
+                    if md_file.exists():
+                        errors.append(f"Markdown file {md_file} already exists, skipping write")
+                    else:
+                        with open(md_file, "w", encoding="utf-8") as f:
+                            f.write(parsed_docs[0].text)
+                    documents.extend(parsed_docs)
+
+                finally:
+                    os.unlink(temp_pdf_path)
+
+            except FileNotFoundError as e:
+                errors.append(f"File access error for {pdf_file.name}: {str(e)}")
+            except IndexError as e:
+                errors.append(f"Parsing error for {pdf_file.name}: No content parsed")
             except Exception as e:
-                st.error(f"Error processing PDF {pdf_file.name}: {str(e)}")
-            finally:
-                os.unlink(tmp_file_path)
+                errors.append(f"Error processing {pdf_file.name}: {str(e)}")
 
-        if not extracted_content:
-            st.warning("No content could be extracted from the provided PDFs.")
-        return extracted_content
-
-    def extract_text_from_image(self, image_file):
-        """Extract text from an image file using Tesseract OCR."""
-        extracted_content = []
-        if not image_file:
-            st.error("No image file provided.")
-            return extracted_content
-
-        valid_extensions = ('.png', '.jpg', '.jpeg', '.tiff', '.bmp')
-        if not image_file.name.lower().endswith(valid_extensions):
-            st.error(f"File {image_file.name} is not a supported image format ({', '.join(valid_extensions)}).")
-            return extracted_content
-
-        try:
-            image = Image.open(image_file)
-            text = pt.image_to_string(image)
-            if text.strip():
-                extracted_content.append({"type": "text", "content": text, "source": image_file.name})
-            else:
-                st.warning(f"No text could be extracted from {image_file.name}.")
-        except pt.TesseractError as e:
-            st.error(f"Tesseract OCR error for {image_file.name}: {str(e)}")
-        except Exception as e:
-            st.error(f"Error processing image {image_file.name}: {str(e)}")
-        
-        return extracted_content
-
-    def extract_content_from_excel(self, excel_files):
-        """Extract content from Excel files using Unstructured.io."""
-        extracted_content = []
-        if not excel_files:
-            st.error("No Excel files provided.")
-            return extracted_content
-
-        for excel_file in excel_files:
-            if not excel_file.name.lower().endswith(('.xlsx', '.xls')):
-                st.error(f"File {excel_file.name} is not a valid Excel file.")
-                continue
-
-            with tempfile.NamedTemporaryFile(delete=False, suffix=".xlsx") as tmp_file:
-                tmp_file.write(excel_file.read())
-                tmp_file_path = tmp_file.name
-
-            try:
-                elements = partition_xlsx(tmp_file_path)
-                for element in elements:
-                    if isinstance(element, NarrativeText):
-                        extracted_content.append({"type": "text", "content": element.text, "source": excel_file.name})
-                    elif isinstance(element, Table):
-                        extracted_content.append({"type": "table", "content": element.text, "source": excel_file.name})
-            except Exception as e:
-                st.error(f"Error processing Excel {excel_file.name}: {str(e)}")
-            finally:
-                os.unlink(tmp_file_path)
-
-        if not extracted_content:
-            st.warning("No content could be extracted from the provided Excel files.")
-        return extracted_content
-
-    def load_files(self, files):
-        """Process multiple files of different types."""
-        pdf_files = [f for f in files if f.name.lower().endswith('.pdf')]
-        image_files = [f for f in files if f.name.lower().endswith(('.png', '.jpg', '.jpeg', '.tiff', '.bmp'))]
-        excel_files = [f for f in files if f.name.lower().endswith(('.xlsx', '.xls'))]
-
-        extracted_content = []
-        extracted_content.extend(self.extract_text_from_pdf(pdf_files))
-        extracted_content.extend(self.extract_text_from_image(image_files[0] if image_files else None))
-        extracted_content.extend(self.extract_content_from_excel(excel_files))
-        
-        return extracted_content
+        return documents, errors

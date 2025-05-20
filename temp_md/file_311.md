@@ -1,0 +1,16 @@
+\# Public Finance # Case Study: College Grants on a Postcard Susan Dynarski and Judith Scott-Clayton of Harvard’s Kennedy School of Government have analyzed the complexity of the current system of college grants for students in a 2006 journal article and have proposed a simple remedy in a 2007 paper.\* They show that the current federal aid application, “Free Application for Federal Student Aid” (FAFSA), has several severe flaws. First, the application form asks a lengthy set of financial questions that is surely a substantial hurdle for many low-income parents, and Dynarski and Scott-Clayton include the daunting pages of questions in their 2006 article. Second, awards of financial aid are not made until the spring of the student’s senior year in high school, too late to help the student decide where to apply and what tuition can be afforded. Third, the complexity of the basis for awards makes it impossible for the student’s parents to estimate, at the time that the student is deciding where to apply, how much aid is likely to be received. \* Dynarski and Scott-Clayton, “The Cost of Complexity in Federal Student Aid: Lessons from Optimal Tax Theory and Behavioral Economics,” National Tax Journal, 59, no. 2 (June 2006), pp. 319–56; and “College Grants on a Postcard: A Proposal for Simple and Predictable Federal Student Aid,” The Hamilton Project of the Brookings Institution, Discussion Paper 2007-01, February 2007.
+
+| If Your Parents’ Adjusted Gross Income Is . . . | Then Your Annual Grant Is . . . |
+| ----------------------------------------------- | ------------------------------- |
+| $0–$14,999                                      | $4,050                          |
+| $15,000–$19,999                                 | $3,700                          |
+| $20,000–$24,999                                 | $3,300                          |
+| $25,000–$29,999                                 | $3,000                          |
+| $30,000–$34,999                                 | $2,400                          |
+| $35,000–$39,999                                 | $1,600                          |
+| $40,000–$44,999                                 | $800                            |
+| $45,000–$49,999                                 | $600                            |
+| $50,000–$74,999                                 | $450                            |
+| $75,000–$99,999                                 | $300                            |
+
+• Grants will be adjusted for attendance status (if you attend half-time, your grant would be half the amount listed). • If you are legally independent from your parents, your aid will be based on your (and your spouse’s) income. • You can obtain your grant by filing a federal income tax return, claiming the college tax credit, and documenting your enrollment. # Student Loans Currently the federal government provides student loan assistance in two ways: direct loans and guaranteed loans. With direct loans, the government itself provides low-interest loans to students and often defers repayment until after graduation. With guaranteed loans, private banks make low-interest loans with the government guaranteeing repayment if the student defaults. To qualify, students must come from families with...

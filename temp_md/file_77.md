@@ -1,0 +1,7 @@
+\# Public Finance 9. Suppose instead of a tax the government sells 60 permits.
+
+* a. If the price were $24, L would demand \_\_\_\_\_\_ and H would demand \_\_\_\_\_\_.
+* b. If the price were $48, L would demand \_\_\_\_\_\_ and H would demand \_\_\_\_\_\_.
+* c. Thus, the price would turn out to be $ \_\_\_\_\_\_.
+
+10\. Assume H is a carbon polluter in a high-income country and L in a low-income country, and the goal is to cut total carbon emissions by 60. This can be done at minimum total cost if H cuts back \_\_\_\_\_\_ and L cuts back \_\_\_\_\_\_; then the total cost would be $ \_\_\_\_\_\_. 11. Instead, suppose H cuts back 60 and L cuts back 0; the total cost would be $\_\_\_\_\_\_\_. 12. Instead, suppose L cuts back 60 and H cuts back 0; the total cost would be $\_\_\_\_\_\_\_. 13. Suppose country H proposes a treaty where each government H and L would agree to levy a tax of $48 on its own polluters. If country L is unaffected by global warming, L should still agree to levy this tax on its own polluters if H pays L at least $\_\_\_\_\_\_. Why? 14. Under a tradable permits treaty where the total number of permits is 60, if country L is unaffected by global warming, country L should still agree to the treaty if it is given at least \_\_\_\_\_\_\_ permits. Why? 15. Go online and find out whether there are any bills that have been introduced in Congress to levy a carbon tax or to establish a carbon cap and trade program. Describe the main features of these bills.

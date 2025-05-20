@@ -1,0 +1,15 @@
+\# 18 Public Finance to a government just as it does to households and business firms. But it also explains why government borrowing may sometimes be warranted. Chapter 13 then looks at the borrowing record of the U.S. government and the projected outlook for its borrowing in the future. # TAXES AND GOVERNMENT SPENDING IN THE UNITED STATES Facts and numbers come alive when they are analyzed and explained. Analyzing and explaining are what we will be doing from Chapter 2 to 13 of this public finance textbook. Nevertheless, there are several public finance facts and numbers that you should see, learn, and even memorize before the analysis and explanation begins. Some of these facts and numbers will surprise you when you see them and will surprise your friends or parents when you tell them. Keep them in front of your mind when you’re with friends or parents, and in back of your mind as you study the rest of this textbook. Here are a few questions for you and your friends and parents. Don’t read the answer until you’ve tried to answer the question; you’ll have more fun, and you’ll remember the answer better when you read it.
+
+1. Select one of the following percentages of gross domestic product (the total output of the economy) to complete the facts below: 10%, 20%, 30%, 40%, 50%, 60%, 70%.
+
+* a. U.S. taxes (federal plus state plus local) as a percentage of GDP: \_\_\_%
+* b. U.S. federal taxes as a percentage of GDP: \_\_\_%
+* c. U.S. state and local taxes as a percentage of GDP: \_\_\_%
+* d. OECD1 taxes as a percentage of GDP: \_\_\_%
+* e. Scandinavian2 taxes as a percentage of GDP: \_\_\_%
+
+Table 1.1 gives the answers, and Figure 1.10 illustrates them. Question: Does Table 1.1 mean that the United States should raise its taxes as a percentage of GDP? Answer: Not necessarily. Even though U.S. taxes are a lower percentage of GDP than most other economically advanced countries, it is possible that taxes are much too high in other countries and still too high in the United States. Until we study the effects of taxation and the government programs financed by taxes, we can’t know whether U.S. taxes should be left at 30%, raised above 30%, or cut below 30%. Table 1.1 can’t tell us what’s best, only what is. It shows that the U.S. is a low-tax country compared to other economically advanced countries.
+
+2. Select one of the three phrases to complete this sentence:3 Federal tax revenue as a percentage of GDP today is (much higher than, about the same as, or much lower than) 40 years ago.
+
+As can be seen in Figure 1.11, federal tax revenue as a percentage of GDP today is about the same as forty years ago—roughly 18%; over the past 40 years tax revenue. 1 OECD is the acronym for the Organization for Economic Cooperation and Development, which includes mainly economically advanced countries. 2 Denmark, Finland, Norway, and Sweden. 3 The source for the questions that follow is the U.S. Congressional Budget Office (CBO), The Budget and Economic Outlook: Fiscal Years 2008 to 2017 (January 2007 edition).

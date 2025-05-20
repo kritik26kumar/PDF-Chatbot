@@ -1,0 +1,9 @@
+\# Public Finance # The Derivation of r\* Each year, benefits equal payroll tax revenue, so BR = tWL, In this formula we now substitute for B₂ and T₁. Since B₂ = R₂ tW₂L₂, then B₂ = tW₂L₂/R₂; and T₁ = tW₁; so (ᵗᵂ L) \_\_\_\_\_\_ B = R² 2 (ᵂ) ( L ) \_\_\_ 2 2 2 2 where B = the benefit per retiree R = the number of retirees t = the tax rate W = the wage per worker (so T = tW is the tax per worker) L = the number of workers In period 1, B₁R₁ = tW₁L₁, and in period 2, B₂R₂ = tW₂L₂. The rate of return r\* is defined as ( ) B \_\_\_ r\* = T² 1 1 so (ᴮ) \_\_\_ r\* = T² 1 gL gW gLgW 1 The formula is r\* = gL + gW + gLgW Note that each g is the growth rate per period where a period is 30 years (a 30-year growth rate is a much larger percentage than an annual growth rate—the growth rate per year). Let us check to see that the formula gives the correct answer for the three blocks in Table 5.2:
+
+| r\*           | gL        | gW  | gLgW       |     |
+| ------------- | --------- | --- | ---------- | --- |
+| First Block:  | r\* = 25% | 0%  | (25%)(0%)  | 25% |
+| Second Block: | r\* = 0%  | 20% | (0%)(20%)  | 20% |
+| Third Block:  | r\* = 25% | 20% | (25%)(20%) | 50% |
+
+Our formula does indeed give the correct answer. Note that the last term in the formula, gLgW, is the smallest of the three terms, so by ignoring the last term, r\* approximately equals gL + gW: The rate of return approximately equals the growth rate of the labor force plus the growth rate of wages: r\* ≈ gL + gW. Note that the payroll tax rate t is not in the formula for r\*. As long as the payroll tax rate t is constant over time, its magnitude has no effect on r\*. The reason is that a higher t means bad news and good news for your rate of return: The bad news is that you pay a higher tax in your work stage; the good news is that you receive a higher benefit in your
