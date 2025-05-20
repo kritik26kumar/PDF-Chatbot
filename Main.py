@@ -15,7 +15,7 @@ obj_dal = dl()
 
 def main():
     st.set_page_config(page_title="Chat with PDFs(LLamaParse)", layout="wide")
-    st.header("📄 Chat with PDFs and Images")
+    st.header("📄 Chat with PDFs(LLamaParse)")
 
     # Initialize session state
     if "messages" not in st.session_state:
