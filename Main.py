@@ -14,7 +14,7 @@ obj_bal = bf()
 obj_dal = dl()
 
 def main():
-    st.set_page_config(page_title="Chat with PDFs and Images", layout="wide")
+    st.set_page_config(page_title="Chat with PDFs(LLamaParse)", layout="wide")
     st.header("📄 Chat with PDFs and Images")
 
     # Initialize session state
